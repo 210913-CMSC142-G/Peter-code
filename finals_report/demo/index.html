@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DPLL Demo</title>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="materialize/css/materialize.min.css"
+      media="screen,projection"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>DPLL SAT Solver</h1>
+      <h6>Input single small letters only for literals, with the or operator. ex. a + b + 'c</p>
+      <div>
+        <div>
+          <div class="input-field col s12">
+            <input id="input-clause" type="text" class="validate" />
+            <label for="input_clause">Clause</label>
+          </div>
+          <a class="waves-effect waves-light btn red" id="clear-clause"
+            >Clear all clauses</a
+          >
+          <a class="waves-effect waves-light btn" id="add-clause">Add clause</a>
+          <a class="waves-effect waves-light btn blue" id="solve">Solve</a>
+        </div>
+        <h6><span id='literal-num'>0</span> literals: <span id='literal-print'></span></h6>
+        <div id="initial-display">
+          <ul class="collection" id="print-clauses">
+          </ul>
+        </div>
+        <a class="waves-effect waves-light btn blue" id="example">Generate Example</a>
+      </div>
+      <h2 id="sat-result"></h2>
+      <div >
+        <ul class="collection" id="print-result">
+        </ul>
+      </div>
+    </div>
+
+    <script src="materialize/js/materialize.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
